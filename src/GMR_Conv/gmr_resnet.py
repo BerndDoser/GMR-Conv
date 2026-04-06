@@ -225,7 +225,7 @@ class GMR_ResNet(nn.Module):
         gmr_conv_size (Union[int, list]): Size of the GMR convolutional kernel, can be a list of length 4 
             to specify different sizes for each layer. Default: 3
         inplanes (int): Number of base channels in the network. Default: 64
-        layer_stride (Type[Union[int, List[int]]]): Stride for each layer. Default: [1, 2, 2, 2]
+        layer_stride (Union[int, List[int]]): Stride for each layer. Default: [1, 2, 2, 2]
         num_rings (Union[int, list]): Number of rings in the GMR kernel, can be a list to specify 
             different values for each layer. Default: None (automatically determined)
         skip_first_maxpool (bool): If True, skip the first maxpool layer, useful for small images. Default: False
@@ -245,7 +245,7 @@ class GMR_ResNet(nn.Module):
         norm_layer: Optional[Callable[..., nn.Module]] = None,
         gmr_conv_size: Union[int, list] = 3,
         inplanes: int = 64,
-        layer_stride: Type[Union[int, List[int]]] = [1, 2, 2, 2],
+        layer_stride: Union[int, List[int]] = [1, 2, 2, 2],
         num_rings: Union[int, list] = None,
         skip_first_maxpool: bool = False,
         sigma_no_weight_decay: bool = False,
