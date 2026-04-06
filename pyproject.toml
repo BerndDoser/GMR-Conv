@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "GMR-Conv"
+version = "1.0.3"
+description = "Official package for 'GMR-Conv: An Efficient Rotation and Reflection Equivariant Convolution Kernel Using Gaussian Mixture Rings'"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+authors = [
+    { name = "Yuexi Du", email = "yuexi.du@yale.edu" },
+    { name = "Jiazhen Zhang", email = "yuexi.du@yale.edu" },
+    { name = "Nicha C. Dvornek", email = "yuexi.du@yale.edu" },
+    { name = "John A. Onofrey", email = "yuexi.du@yale.edu" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "scipy>=1.9.0",
+    "numpy>=1.22.0",
+    "torch>=1.8.0",
+    "pillow>=9.2.0",
+    "monai>=0.7.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/XYPB/GMR-Conv"
+Issue = "https://github.com/XYPB/GMR-Conv/issues"
